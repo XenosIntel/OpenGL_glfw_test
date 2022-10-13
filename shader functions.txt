@@ -1,0 +1,65 @@
+/*GLuint vertexShader;
+    createShader(vertexShader, GL_VERTEX_SHADER, "vert.glsl");
+
+    GLuint fragmentShader;
+    createShader(fragmentShader, GL_FRAGMENT_SHADER, "frag.glsl");
+
+    GLuint shaders[] = {vertexShader, fragmentShader};
+    GLuint shaderProgram;
+    createProgram(shaderProgram, 2, shaders);*/
+
+/*void createShader(GLuint &handle, GLenum type, const char *path)
+{
+    GLchar *shaderSource;
+    std::ifstream file(path, std::ifstream::binary);
+
+    file.seekg(0, file.end);
+    int lenght = file.tellg();
+    file.seekg(0, file.beg);
+
+    shaderSource = new GLchar[lenght];
+
+    file.read(shaderSource, lenght);
+    shaderSource[lenght] = '\0';
+    file.close();
+
+    handle = glCreateShader(type);
+    glShaderSource(handle, 1, &shaderSource, NULL);
+    delete[] shaderSource;
+    glCompileShader(handle);
+
+    int success;
+    char infoLog[512];
+    glGetShaderiv(handle, GL_COMPILE_STATUS, &success);
+    if(!success)
+    {
+        glGetShaderInfoLog(handle, 512, NULL, infoLog);
+        std::cout << "Shader compilation failed: " << infoLog << std::endl;
+    }
+}
+
+void createProgram(GLuint &handle, int n, GLuint *shaders)
+{
+    handle = glCreateProgram();
+
+    for(int i = 0; i < n; i++)
+    {
+        glAttachShader(handle, shaders[i]);
+    }
+
+    glLinkProgram(handle);
+
+    int success;
+    char infoLog[512];
+    glGetProgramiv(handle, GL_LINK_STATUS, &success);
+    if(!success)
+    {
+        glGetProgramInfoLog(handle, 512, NULL, infoLog);
+        std::cout << "Program linking failed: " << infoLog << std::endl;
+    }
+
+    for(int i = 0; i < n; i++)
+    {
+        glDeleteShader(shaders[i]);
+    }
+}*/

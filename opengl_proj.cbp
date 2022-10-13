@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="opengl_proj" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/opengl_proj" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="../../../../Libs/glfw-3.3.8/include" />
+					<Add directory="../../../../Libs/glad_debug/include" />
+					<Add directory="../../../../Libs/other stuff" />
+					<Add directory="../../../../Libs/glm" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../../Libs/glfw-3.3.8/src/libglfw3.a" />
+					<Add library="../../../../msys64/mingw64/lib/libgdi32.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/opengl_proj" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Camera.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Camera.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="frag.glsl">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="glad.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="shaderProgram.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="shaderProgram.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="vert.glsl">
+			<Option target="Debug" />
+		</Unit>
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
